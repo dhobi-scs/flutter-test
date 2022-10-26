@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -e
+
+sdkmanager platform-tools emulator "system-images;android-31;default;x86_64"
+
+rm -rf screenshots
+emulator -avd iPad_Air_5th_Gen_API_31 -no-window &
+adb wait-for-device
+flutter drive --driver=test_driver/integration_test.dart --target=integration_test/test.dart

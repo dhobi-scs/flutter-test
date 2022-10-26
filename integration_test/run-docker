@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -e
+
+docker run --rm \
+    --device /dev/kvm \
+    --env ANDROID_AVD_HOME=/build/.avd \
+    --name flutter-test \
+    --volume $PWD:/build \
+    --workdir /build \
+    cirrusci/flutter:3.3.5 \
+    /build/integration_test/run
