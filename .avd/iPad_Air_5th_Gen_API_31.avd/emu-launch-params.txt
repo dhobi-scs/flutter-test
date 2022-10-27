@@ -1,0 +1,10 @@
+C:\Users\dhobi\AppData\Local\JetBrains\Toolbox\apps\AndroidStudio\ch-0\213.7172.25.2113.9123335\jre\bin
+D:\var\android-sdk\emulator\emulator.exe
+7
+D:\var\android-sdk\emulator\emulator.exe
+-netdelay
+none
+-netspeed
+full
+-avd
+iPad_Air_5th_Gen_API_31
