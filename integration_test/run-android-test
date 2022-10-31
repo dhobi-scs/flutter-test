@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -e
+
+rm -rf screenshots
+#emulator -avd iPad_Air_5th_Gen_API_31 -no-window &
+adb wait-for-device
+
+cd android
+./gradlew.bat app:connectedAndroidTest -Ptarget=`pwd`/../integration_test/test.dart
